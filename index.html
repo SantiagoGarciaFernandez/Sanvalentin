@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #noBtn {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="question">Do you want to be my Valentine? ❤️</h1>
+    <button class="btn" id="yesBtn" onclick="yesClicked()">Yes</button>
+    <button class="btn" id="noBtn" onmouseover="moveNo()">No</button>
+    
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = "<h1>No podias decir que no Silvia Samara Rojas Sanchez, no estaremos este San Valentin juntos pero hay una buena noticia que tendremos muchos mas en adelante, tu eres mi 14 de Febrero todos los TE AMO AMOR ❤️❤️</h1>";
+        }
+        function moveNo() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("noBtn").style.left = x + "px";
+            document.getElementById("noBtn").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
